@@ -210,7 +210,6 @@ export default function rootReducer(state: State, action: Object): State {
       return {
         ...state,
         tracks,
-        selectRange: undefined,
         currentTrackIndex: trackIndex,
         cursor: getValidCursor(state.cursor, tracks.present[trackIndex])
       };
