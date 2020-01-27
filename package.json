@@ -68,5 +68,9 @@
     "reselect": "3.0.1",
     "soundfont-player": "^0.10.4",
     "xmldoc": "^0.5.1"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
   }
 }
