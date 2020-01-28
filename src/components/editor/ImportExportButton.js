@@ -4,7 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 
 import { replaceSong } from '../../actions/tracks';
 import { getTracksSelector } from '../../util/selectors/track';
-import { importMusicXml } from '../../util/musicXml';
+import { importMusic } from '../../util/musicJson';
 
 const styles = StyleSheet.create({
   hidden: { display: 'none' },
@@ -36,7 +36,7 @@ class ImportButton extends Component {
   };
 
   onFileRead = e => {
-    const tracks = importMusicXml(e.target.result);
+    const tracks = importMusic(e.target.result);
     this.props.replaceSong(tracks);
   };
 

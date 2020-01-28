@@ -66,8 +66,7 @@
     "redux": "^3.5.1",
     "redux-undo": "^1.0.0-beta8",
     "reselect": "3.0.1",
-    "soundfont-player": "^0.10.4",
-    "xmldoc": "^0.5.1"
+    "soundfont-player": "^0.10.4"
   },
   "engines": {
     "node": ">=10",

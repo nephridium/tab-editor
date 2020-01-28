@@ -8,6 +8,8 @@ const devMiddleware = require('webpack-dev-middleware');
 const app = express();
 const compiler = webpack(config);
 
+const port = process.env.TAB_EDITOR_PORT || 3000;
+
 const devMiddleWareInstance = devMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
@@ -30,10 +32,10 @@ app.get('*', function(req, res, next) {
   });
 });
 
-app.listen(3000, 'localhost', function(err) {
+app.listen(port, 'localhost', function(err) {
   if (err) {
     return console.log(err);
   }
 
-  console.log('Listening at http://localhost:3000');
+  console.log(`Listening on http://localhost:${port}`);
 });

@@ -23,8 +23,7 @@ This uses the Web Audio API for playback. Thanks to [soundfont-player](https://g
 * Dotted Notes
 * Tuplets
 * Vibrato, Tremolo and Trills (32nd notes)
-* Export as JSON file (my custom format)
-* Import MusicXML
+* Import/Export as JSON file
 * Drag-to-select ranges of notes/measures
 * Cut / Copy / Paste both individual notes and multiple notes/measures
 * Navigate cursor via clicking and arrows

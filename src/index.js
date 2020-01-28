@@ -6,7 +6,7 @@ import App from './containers/App';
 
 import configureStore from './util/configureStore';
 import { replaceTempo } from './util';
-import track from '../data/song';
+import song from '../data/song';
 import Redbox from 'redbox-react';
 
 const rootElement = document.createElement('div');
@@ -17,7 +17,10 @@ import 'react-select/dist/react-select.css';
 import 'babel-polyfill';
 
 const initialState = {
-  tracks: [{ ...track, measures: replaceTempo(track.measures) }],
+  tracks: song.map(track => ({
+    ...track,
+    measures: replaceTempo(track.measures)
+  })),
   layout: 'page',
   currentTrackIndex: 0,
   clipboard: null,
